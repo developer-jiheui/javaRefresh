@@ -46,7 +46,7 @@ public class Customer {
   
   // 구매
   // 반환 : 영수증
-  public String buy() {
+  public String buy() throws RuntimeException {
     
     String receipt = "영수증\n";
     
@@ -62,8 +62,7 @@ public class Customer {
       
       // 구매 가능 여부 체크
       if(money < total) {
-        System.out.println("구매금액이 부족합니다.");
-        return null;
+        throw new RuntimeException("구매금액이 부족합니다.");
       }
       
       // 영수증 만들기
