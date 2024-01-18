@@ -6,10 +6,8 @@ import java.util.List;
 public class Cart {
 
   // field
-  private List<Product> products;
-//  private Product[] products;  // 카트에 담은 물건들
- // private int count;           // 카트에 담은 물건의 개수
-
+  private List<Product> products;  // 카트에 담은 물건들
+  
   // constructor
   public Cart(int cartSize){
     products = new ArrayList<>(cartSize);
@@ -22,26 +20,18 @@ public class Cart {
   public void setProducts(List<Product> products) {
     this.products = products;
   }
-//  public int getCount() {
-//    return products.size();
-//  }
-//  public void setCount(int count) {
-//    this.count = count;
-//  }
-
+  
   // 물건 담기
-  public void addProduct(Product product) {
+  public void addProduct(Product product) throws RuntimeException {
 
     // 카트가 꽉 찬 경우
     if(products.add(product)) {
       System.out.println("카트가 가득 찼습니다.");
       return;
     }
-
     // 담을 물건이 없는 경우
     if(product == null) {
-      System.out.println("카트에 담을 물건이 없습니다.");
-      return;
+      throw new RuntimeException("카트에 담을 물건이 없습니다.");
     }
     
     products.add(product);
@@ -49,44 +39,41 @@ public class Cart {
   }
   
   // 물건 바꾸기
-  public void changeProduct(int idx, Product product) {
+  public void changeProduct(int idx, Product product) throws RuntimeException {
     
     // 카트가 비어 있는 경우
-    if(products.remove(idx)== null) {
-      System.out.println("카트가 비어 있습니다.");
-      return;
+    if(products.size() == 0) {
+      throw new RuntimeException("카트가 비어 있습니다.");
     }
     
     // 바꿀 물건이 없는 경우
     if(product == null) {
-      System.out.println("바꿀 물건이 없습니다.");
-      return;
+      throw new RuntimeException("바꿀 물건이 없습니다.");
     }
     
     // 존재하지 않는 물건 번호(인덱스)인 경우
     if(idx < 0 || idx >= products.size()) {
-      System.out.println("물건 번호가 잘못되었습니다.");
-      return;
+      throw new RuntimeException("물건 번호가 잘못되었습니다.");
     }
     
     products.set(idx,product);
 
   }
-
-
+  
   // 물건 빼기
-  public void removeProduct(int idx) {
-
+  public void removeProduct(int idx) throws RuntimeException {
+    
+    // 카트에 담긴 물건 개수
+    int size = products.size();
+    
     // 카트가 비어 있는 경우
-    if(products.remove(idx)==null) {
-      System.out.println("카트가 비어 있습니다.");
-      return;
+    if(size == 0) {
+      throw new RuntimeException("카트가 비어 있습니다.");
     }
     
     // 존재하지 않는 물건 번호(인덱스)인 경우
-    if(idx < 0 || idx >= products.size()) {
-      System.out.println("물건 번호가 잘못되었습니다.");
-      return;
+    if(idx < 0 || idx >= size) {
+      throw new RuntimeException("물건 번호가 잘못되었습니다.");
     }
 
     products.remove(idx);

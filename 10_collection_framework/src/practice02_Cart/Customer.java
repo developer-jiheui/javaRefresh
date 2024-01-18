@@ -29,18 +29,18 @@ public class Customer {
     this.cart = cart;
   }
   
-  // 물건 넣기
-  public void addToCart(Product product) {
+  // 물건 담기
+  public void addToCart(Product product) throws RuntimeException {
     cart.addProduct(product);
   }
   
   // 물건 바꾸기
-  public void changeCart(int idx, Product product) {
+  public void changeCart(int idx, Product product) throws RuntimeException {
     cart.changeProduct(idx, product);
   }
   
   // 물건 빼기
-  public void removeCart(int idx) {
+  public void removeCart(int idx) throws RuntimeException {
     cart.removeProduct(idx);
   }
   
