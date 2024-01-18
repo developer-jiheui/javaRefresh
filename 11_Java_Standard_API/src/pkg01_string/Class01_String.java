@@ -1,4 +1,4 @@
-package pkg01_string;
+package pkg01_String;
 
 import java.util.Arrays;
 
@@ -241,7 +241,8 @@ public class Class01_String {
   }
   
   public static void main(String[] args) {
-    method15();
+    //method15();
+    practice02();
   }
 
   public static void practice01() {
@@ -258,11 +259,11 @@ public class Class01_String {
 
     //앞으로 읽어도 뒤로읽어도 동일한 문자열 판단하기
 
-    String word = "level";
+    String word = "우영우영우영우";
 
     //1.한글자씩 비교하기
     for (int i = 0; i < word.length(); i++) {
-      if(word.charAt(i)==word.charAt(word.length()-i)){
+      if(word.charAt(i)==word.charAt(word.length()-i-1)){
         continue;
       }
       else{
@@ -270,18 +271,14 @@ public class Class01_String {
         break;
       }
     }
+    System.out.println("SAME");
     //거꾸로 문자열을 만들어서 비교하기
-    String backwards = null;
+    String backwards = "";
     for (int i = 0; i < word.length(); i++) {
-        backwards += word.charAt(word.length()-i);
-        if(backwards.charAt(i)==word.charAt(i)){
-          continue;
-        }
-        else{
-          System.out.println("Not the same");
-          break;
-        }
+        backwards += word.charAt(word.length()-i-1);
     }
+    System.out.println(word.equals(backwards));
+
 
   }
   
