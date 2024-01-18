@@ -7,7 +7,7 @@ public class MainClass {
     // 10000원 가진 고객
     Customer customer = new Customer(10000);
     
-    // 5개 물건 담을 수 있는 카트
+    // 10개 물건 담을 수 있는 카트
     Cart cart = new Cart(10);
     
     // 고객이 카트 가짐
