@@ -2,9 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9257b339-729d-432b-b227-7c4599fa8d6c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg03_input/Class01_Scanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg03_input/Class02_JOptionPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg04_random/Class01_Math.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg04_random/Class02_SecureRandom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg05_etc/Class01_Optional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg05_etc/Class02_UUID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg05_etc/Class03_DecimalFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/practice01/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/practice02_Lotto/Lotto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/practice02_Lotto/LottoMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/practice03_Employee/Company.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/practice03_Employee/CompanyHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/practice03_Employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/practice03_Employee/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/practice03_Employee/PartTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_java_standard_api/src/practice03_Employee/Regular.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/pkg01_File/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/pkg02_OutputStream/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/pkg02_OutputStream/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/pkg03_InputStream/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/pkg04_Writer/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/pkg05_Reader/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/pkg06_try_catch_resources/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/practice01_byte_copy/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/practice01_byte_copy/MyFileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/practice02_text_copy/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12_io/src/practice02_text_copy/MyFileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13_network/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13_network/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13_network/src/pkg01_java_net/Class01_InetAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13_network/src/pkg01_java_net/Class02_URL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13_network/src/pkg01_java_net/Class03_HttpURLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13_network/src/pkg01_java_net/Class04_InputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13_network/src/pkg01_java_net/Class05_URLEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13_network/src/pkg02_open_api/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg01_lambda_expr/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg01_lambda_expr/GasStation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg01_lambda_expr/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg02_FunctionalInterface/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg02_FunctionalInterface/MyInterface1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg02_FunctionalInterface/MyInterface2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg02_FunctionalInterface/MyInterface3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg02_FunctionalInterface/MyInterface4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg03_Supplier/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg04_Consumer/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg05_Function/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg06_Predicate/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg07_terminal_method/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg08_intermedia_method/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14_lambda_Stream/src/pkg08_intermedia_method/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/15_jdbc/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/15_jdbc/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/15_jdbc/src/db/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/15_jdbc/src/pkg01_connection/MainClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg01_String/Class01_String.java" beforeDir="false" afterPath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg01_String/Class01_String.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg01_String/Class02_StringBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg01_String/Class02_StringBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/08_interface/src/pkg02_interface/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/08_interface/src/pkg02_interface/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/.project" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/11_Java_Standard_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/11_Java_Standard_API.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg01_String/Class01_String.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg01_String/Class02_StringBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg01_String/Class03_System.java" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg01_String/Class03_System.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg02_date_time/Class01_Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg02_date_time/Class01_Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg02_date_time/Class02_SimpleDateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg02_date_time/Class02_SimpleDateFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg02_date_time/Class03_System.java" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg02_date_time/Class03_System.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_Java_Standard_API/src/pkg02_date_time/Class04_LocalDateTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg02_date_time/Class04_LocalDateTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_java_standard_api/src/pkg01_String/Class01_String.java" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg01_String/Class01_String.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11_java_standard_api/src/pkg01_String/Class02_StringBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/11_java_standard_api/src/pkg01_String/Class02_StringBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,13 +88,21 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="today" />
+    <option name="BRANCH" value="t/master" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2bcBcCGDtRmGCeeW9eazS6VA46T" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -93,6 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705544430984</updated>
       <workItem from="1705544432975" duration="6844000" />
+      <workItem from="1706504567490" duration="1169000" />
     </task>
     <servers />
   </component>
@@ -109,5 +187,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
