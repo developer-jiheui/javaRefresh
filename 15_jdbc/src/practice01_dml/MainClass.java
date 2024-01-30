@@ -31,8 +31,9 @@ public class MainClass {
           System.out.println("oracle.jdbc.OracleDriver 클래스를 찾을 수 없습니다.");
         }
 
-       // 접속을 위해서 필요한 정보(주소, 계정정보)
-    String url = "jdbc:oracle:thin:@192.168.0.214";
+    // 접속을 위해서 필요한 정보(주소, 계정정보)
+    //String url = System.getProperty("jdbc.url");
+    String url = "jdbc:oracle:thin:@192.168.0.214:1521:xe";
     String user = "GD";
     String password = "1111";
 
@@ -61,18 +62,18 @@ public class MainClass {
     try {
 
       // oracle.jdbc.OracleDriver 클래스 로드
-      Class.forName("oracle.jdbc.OracleDriver");
+    //  Class.forName("oracle.jdbc.OracleDriver");
 
       // 데이터베이스 접속 정보
-       url = System.getProperty("jdbc.url");
-       user = System.getProperty("jdbc.user");
-       password = System.getProperty("jdbc.password");
+//       url = System.getProperty("jdbc.url");
+//       user = System.getProperty("jdbc.user");
+//       password = System.getProperty("jdbc.password");
 
       // Connection 객체 생성
       con = DriverManager.getConnection(url, user, password);
 
       // 쿼리문
-      String sql = "INSERT INTO TALK_T(TALK_NO, TALK_CONTENT, TALK_EDITOR, WRITTEN_AT) VALUES(SAMPLE_SEQ.NEXTVAL, 'HELLO WORLD', '이지희', CURRENT_TIMESTAMP)";
+      String sql = "INSERT INTO TALK_T(TALK_NO, TALK_CONTENT, TALK_USER, WRITTEN_AT) VALUES(TALK_SEQ.NEXTVAL, 'HELLO WORLD', '이지희', CURRENT_TIMESTAMP)";
 
       // PreparedStatement 객체 생성
       ps = con.prepareStatement(sql);
