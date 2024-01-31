@@ -1,6 +1,5 @@
 package db.main;
 
-import db.dao.UserDao;
 import db.dto.UserDto;
 import db.service.UserService;
 import db.service.UserServiceImpl;
@@ -23,9 +22,9 @@ public class MainClass {
 //        System.out.println(result1 + "row has modified.");
 
 
-        //UserService userService = new UserServiceImpl();
+        UserService userService = new UserServiceImpl();
 
-        List<UserDto> users = userDao.getUsers();
+        List<UserDto> users = userService.getUsers();
         for(UserDto user : users){
             System.out.println(user);
         }
