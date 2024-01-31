@@ -22,7 +22,7 @@ public class UserController {
   }
   
   // method
-  public String requestHandle(String choice, UserDto userDto) {
+  public String requestHandler(String choice, UserDto userDto) {
     
     String message = "";
     
@@ -54,5 +54,6 @@ public class UserController {
     return message;
     
   }
-  
+
+
 }

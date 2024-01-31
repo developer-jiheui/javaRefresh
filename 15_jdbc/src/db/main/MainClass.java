@@ -1,6 +1,7 @@
 package db.main;
 
 import db.ctrl.UserController;
+import db.dto.UserDto;
 
 public class MainClass {
 
@@ -8,8 +9,8 @@ public class MainClass {
     
     UserController userController = new UserController();
 
-   // System.out.println(userController.requestHandler("3", new UserDto(0, "테스트이름", "테스트연락처", null)));
-  //  System.out.println(userController.requestHandler("1", null));
+    System.out.println(userController.requestHandler("3", new UserDto(0, "테스트이름", "테스트연락처", null)));
+    System.out.println(userController.requestHandler("1", null));
 
 //        UserDto userDto = new UserDto(0,"test Name","test contact",null);
 //        UserDto userDto1 = new UserDto(1,"modify Name","modify contact", null);

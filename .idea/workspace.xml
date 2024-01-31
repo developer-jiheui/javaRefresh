@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a3890c1-dac8-4cf4-b0a2-69bcbcc42519" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/15_jdbc/src/db/ctl/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/15_jdbc/src/db/app/UserApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15_jdbc/src/db/ctl/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/15_jdbc/src/db/ctl/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15_jdbc/src/db/ctrl/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/15_jdbc/src/db/ctrl/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/15_jdbc/src/db/main/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/15_jdbc/src/db/main/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15_jdbc/src/db/view/DeleteView.java" beforeDir="false" afterPath="$PROJECT_DIR$/15_jdbc/src/db/view/DeleteView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15_jdbc/src/db/view/DetailView.java" beforeDir="false" afterPath="$PROJECT_DIR$/15_jdbc/src/db/view/DetailView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15_jdbc/src/db/view/EditView.java" beforeDir="false" afterPath="$PROJECT_DIR$/15_jdbc/src/db/view/EditView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706592126795</updated>
-      <workItem from="1706592130833" duration="18261000" />
+      <workItem from="1706592130833" duration="22102000" />
     </task>
     <servers />
   </component>

@@ -6,10 +6,15 @@ import db.service.UserServiceImpl;
 
 public class UserController {
 
+    //field
+    private UserService userService;
 
-    public static String requestHandler(String choice, UserDto userDto){
+    //constructor
+    public UserController(){userService = new UserServiceImpl();}
 
-        UserService userService = new UserServiceImpl();
+    //method
+    public  String requestHandler(String choice, UserDto userDto){
+
         String message ="";
 
         switch(choice){
