@@ -1,5 +1,6 @@
 package db.main;
 
+import db.ctl.UserController;
 import db.dto.UserDto;
 import db.service.UserService;
 import db.service.UserServiceImpl;
@@ -10,6 +11,9 @@ import java.util.List;
 public class MainClass {
 
     public static void main(String[] args) throws SQLException {
+
+        userController userController = new UserController();
+        System.out.println(userController.requestHandler("3".new UserDto("테스트이름")));
 
 //        UserDto userDto = new UserDto(0,"test Name","test contact",null);
 //        UserDto userDto1 = new UserDto(1,"modify Name","modify contact", null);
