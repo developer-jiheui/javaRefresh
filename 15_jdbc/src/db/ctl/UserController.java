@@ -7,7 +7,7 @@ import db.service.UserServiceImpl;
 public class UserController {
 
 
-    public String requestHandler(String choice, UserDto userDto){
+    public static String requestHandler(String choice, UserDto userDto){
 
         UserService userService = new UserServiceImpl();
         String message ="";
