@@ -1,14 +1,10 @@
 package db.dao;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import db.dto.UserDto;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import db.dto.UserDto;
 
 /*
  * DAO
@@ -26,134 +22,199 @@ import db.dto.UserDto;
 
 public class UserDao {
 
-  // Singleton Pattern
-  private UserDao() {}
-  private static UserDao userDao = new UserDao();
-  public static UserDao getInstance() {
-    return userDao;
-  }
-  
-  // field
-  private Connection con;
-  private PreparedStatement ps;
-  private ResultSet rs;
-
-  // private 메소드 (UserDao 내부에서 호출하는 메소드)
-  private void connection() {
-
-    try {
-      
-      Class.forName("oracle.jdbc.OracleDriver");
-      String url = System.getProperty("jdbc.url");
-      String user = System.getProperty("jdbc.user");
-      String password = System.getProperty("jdbc.password");
-      con = DriverManager.getConnection(url, user, password);
-      
-    } catch (ClassNotFoundException e) {
-      System.out.println("OracleDriver 클래스 로드 실패");
-    } catch (SQLException e) {
-      System.out.println("데이터베이스 접속 실패");
+    // Singleton Pattern
+    private UserDao() {
     }
-    
-  }
 
-  private void close() {
-    try {
-      if(rs != null)  rs.close();
-      if(ps != null)  ps.close();
-      if(con != null) con.close();
-    } catch (Exception e) {
-      e.printStackTrace();
+    private static UserDao userDao = new UserDao();
+
+    public static UserDao getInstance() {
+        return userDao;
     }
-  }
- 
-  // public 메소드 (실제 기능을 담당하는 메소드)
-  
-  // 모든 사용자 조회하기 : selectUsers, selectUserList, getUsers, getUserList 등
-  public List<UserDto> getUsers() {
-    
-    List<UserDto> users = new ArrayList<UserDto>();
-    
-    try {
-      
-      connection();
-      String sql = "SELECT USER_NO, USER_NAME, USER_TEL, JOIN_DT FROM USER_T ORDER BY USER_NO DESC";
-      ps = con.prepareStatement(sql);
-      rs = ps.executeQuery();
-      while(rs.next()) {
-        UserDto userDto = new UserDto();
-        userDto.setUser_no(rs.getInt(1));
-        userDto.setUser_name(rs.getString(2));
-        userDto.setUser_tel(rs.getString(3));
-        userDto.setJoin_dt(rs.getString(4));
-        users.add(userDto);
+
+    // field
+    private Connection con;
+    private PreparedStatement ps;
+    private ResultSet rs;
+
+    // private 메소드 (UserDao 내부에서 호출하는 메소드)
+    private void connection() {
+
+        try {
+
+            Class.forName("oracle.jdbc.OracleDriver");
+//             String url = System.getProperty("jdbc.url");
+//            String user = System.getProperty("jdbc.user");
+//            String password = System.getProperty("jdbc.password");
+
+
+            String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+            String user ="GD";
+            String password = "1111";
+            con = DriverManager.getConnection(url, user, password);
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("OracleDriver 클래스 로드 실패");
+        } catch (SQLException e) {
+            System.out.println("데이터베이스 접속 실패");
+        }
+
+    }
+    private void close() {
+        try {
+            if (rs != null) rs.close();
+            if (ps != null) ps.close();
+            if (con != null) con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // public 메소드 (실제 기능을 담당하는 메소드)
+
+    // 모든 사용자 조회하기 : selectUsers, selectUserList, getUsers, getUserList 등
+    public List<UserDto> getUsers() {
+
+        List<UserDto> users = new ArrayList<UserDto>();
+
+        try {
+
+            connection();
+            String sql = "SELECT USER_NO, USER_NAME, USER_TEL, JOIN_DT FROM USER_T ORDER BY USER_NO DESC";
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                UserDto userDto = new UserDto();
+                userDto.setUser_no(rs.getInt(1));
+                userDto.setUser_name(rs.getString(2));
+                userDto.setUser_tel(rs.getString(3));
+                userDto.setJoin_dt(rs.getString(4));
+                users.add(userDto);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            close();
+        }
+
+        return users;
+
+    }
+
+    // 특정 사용자 조회하기 : selectUser, selectUserByNo, getUser, getUserByNo 등
+    public UserDto getUser(int user_no) {
+
+        UserDto userDto = null;
+
+        try {
+
+            connection();
+            String sql = "SELECT USER_NO, USER_NAME, USER_TEL, JOIN_DT FROM USER_T WHERE USER_NO = ?";
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, user_no);
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                userDto = new UserDto();
+                userDto.setUser_no(rs.getInt(1));
+                userDto.setUser_name(rs.getString(2));
+                userDto.setUser_tel(rs.getString(3));
+                userDto.setJoin_dt(rs.getString(4));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            close();
+        }
+
+        return userDto;
+
+    }
+
+    // 사용자 등록 : insertUser, saveUser, regiterUser 등
+    public int saveUser(UserDto userDto) {
+
+        int result = 0;
+
+      try {
+
+        connection();
+//        String createT =
+//                "CREATE TABLE USER_T (\n" +
+//                "    USER_NO   NUMBER NOT NULL,\n" +
+//                "    USER_NAME VARCHAR2(100 BYTE),\n" +
+//                "    USER_TEL  VARCHAR2(100 BYTE),\n" +
+//                "    JOIN_DT   VARCHAR2(10 BYTE),\n" +
+//                "    CONSTRAINT PK_USER PRIMARY KEY(USER_NO)\n" +
+//                ")\n" ;
+        String sql = "INSERT INTO USER_T (USER_NO, USER_NAME, USER_TEL, JOIN_DT) VALUES(USER_SEQ.NEXTVAL, ?,? , TO_CHAR(CURRENT_DATE,'YYYY-MM-DD'))";
+        //ps= con.prepareStatement(createT);
+        ps = con.prepareStatement(sql);
+        ps.setString(1, userDto.getUser_name());
+        ps.setString(2,userDto.getUser_tel());
+        result = ps.executeUpdate();
+
+      } catch (Exception e) {
+        e.printStackTrace();
       }
-      
-    } catch (Exception e) {
-      e.printStackTrace();
-    } finally {
-      close();
-    }
-    
-    return users;
-    
-  }
-  
-  // 특정 사용자 조회하기 : selectUser, selectUserByNo, getUser, getUserByNo 등
-  public UserDto getUser(int user_no) {
-    
-    UserDto userDto = null;
-    
-    try {
-      
-      connection();
-      String sql = "SELECT USER_NO, USER_NAME, USER_TEL, JOIN_DT FROM USER_T WHERE USER_NO = ?";
-      ps = con.prepareStatement(sql);
-      ps.setInt(1, user_no);
-      rs = ps.executeQuery();
-      if(rs.next()) {
-        userDto = new UserDto();
-        userDto.setUser_no(rs.getInt(1));
-        userDto.setUser_name(rs.getString(2));
-        userDto.setUser_tel(rs.getString(3));
-        userDto.setJoin_dt(rs.getString(4));
+      finally {
+        close();
       }
-      
-    } catch (Exception e) {
-      e.printStackTrace();
-    } finally {
-      close();
+
+
+      return result;
     }
-    
-    return userDto;
-    
-  }
-  
-  // 사용자 등록 : insertUser, saveUser, regiterUser 등
-  
-  
-  
-  // 사용자 수정 : updateUser, modifyUser 등
-  
-  
-  
-  // 사용자 삭제 : deleteUser, removeUser 등
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+    // 사용자 수정 : updateUser, modifyUser 등
+    public int modifyUser(UserDto userDto){
+
+        int result =0;
+
+        try{
+
+            connection();
+            String sql = "UPDATE USER_T" +
+                    "   SET USER_NAME = ?, USER_TEL = ?" +
+                    "   WHERE USER_NO = ?";
+
+            ps= con.prepareStatement(sql);
+            ps.setString(1,userDto.getUser_name());
+            ps.setString(2,userDto.getUser_tel());
+            ps.setInt(3,userDto.getUser_no());
+            result = ps.executeUpdate();
+
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally {
+            close();
+        }
+
+        return result;
+    }
+
+    // 사용자 삭제 : deleteUser, removeUser 등
+    public int removeUser(int user_no){
+
+        int result = 0;
+
+        try {
+
+            connection();
+            String sql = "DELETE FROM USER_T WHERE USER_NO = ?";
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, user_no);
+            result = ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            close();
+        }
+
+        return result;
+    }
+
 }

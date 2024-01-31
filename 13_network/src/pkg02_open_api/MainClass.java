@@ -60,7 +60,7 @@ public class MainClass {
        JSONArray items = obj.getJSONObject("items").getJSONArray("item");
        for(int i = 0, length = items.length(); i < length; i++) {
         // Map<String, Object> map = items.getJSONObject(i).toMap();
-        // System.out.println(map.get("occrrnc_dt") + ":" + map.get("dth_dnv_cnt"));
+        // System.out.println(map.get("nc_dt") + ":" + map.get("dth_dnv_cnt"));
        }
        
        in.close();
